@@ -1,0 +1,60 @@
+<!-- <html lang="en">
+  <head>
+    <title>Calculator Example</title>
+  </head>
+  <body>
+    <div>
+      Result
+      <span id="result"></span>
+    </div>
+  </body>
+  <script>
+    let num1 = 2;
+    let num2 = 4;
+    fetch(`/calculator/add?num1=${num1}&num2=${num2}`)
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById("result").innerHTML = data.result;
+      });
+  </script>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./calc.js"></script>
+</head>
+<body>
+    <h2 id="display" class="display">   </h2>
+
+    <div class="row-0">
+        <button onclick="myNumber(0)" id="0" class="column"> 0 </button>
+        <button onclick="myNumber(1)" id="1" class="column"> 1 </button>
+        <button onclick="myNumber(2)" id="2" class="column"> 2 </button>
+    </div>
+    <div class="row-1">
+        <button onclick="myNumber(3)" id="3" class="column"> 3 </button>
+        <button onclick="myNumber(4)" id="4" class="column"> 4 </button>
+        <button onclick="myNumber(5)" id="5" class="column"> 5 </button>
+    </div>
+    <div class="row-2">
+        <button onclick="myNumber(6)" id="6" class="column"> 6 </button>
+        <button onclick="myNumber(7)" id="7" class="column"> 7 </button>
+        <button onclick="myNumber(8)" id="8" class="column"> 8 </button>
+    </div>
+    <div class="row-3">
+        <button onclick="myNumber(9)" id="9" class="column"> 9 </button>
+        <button onclick="equate()" id="equals" class="column"> = </button>
+    </div>
+    <div class="row-4">
+        <button onclick="myOperator('+')" id="add" class="operator"> + </button>
+        <button onclick="myOperator('-')" id="substract" class="operator"> - </button>
+        <button onclick="myOperator('*')" id="multiply" class="operator"> x </button>
+        <button onclick="myOperator('/')" id="divide" class="operator"> ÷ </button>
+    </div>
+</body>
+</html>
